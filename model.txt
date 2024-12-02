@@ -1,0 +1,28 @@
+import React from "react"
+import Link from "../src/components/Link"
+import Footer from "../src/components/patterns/Footer"
+
+function Title( {children, as}) {
+    const Tag = as;
+    return (
+        <React.Fragment>
+            <Tag>
+                {children}
+            </Tag>
+            <style jsx>{`
+                ${Tag} {	
+                    color: blue;
+                }
+            `}</style>
+        </React.Fragment>
+    )
+}
+export default function HomePage() {
+    return (
+        <div>
+            <Title as='h1'>Alura Cases - Home Page</Title>
+            <Link href="/faq">Alura Cases - Páginas de Perguntas FAQ</Link>
+            <Footer />
+        </div>
+    )
+}
